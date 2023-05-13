@@ -105,7 +105,7 @@ h1 {
   }
 
   .switch input {display:none}
-  .connector:before {
+  .connector::before {
     position: absolute;
     content:"";
     height: 50px;
@@ -121,7 +121,7 @@ h1 {
     background-color: darkcyan;
   }
   
-  input:checked + .connector:before {
+  input:checked + .connector::before {
     transform: translateX(50px)
   }
 
