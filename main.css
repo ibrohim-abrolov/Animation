@@ -73,6 +73,59 @@ body {
 }
 
 
+.switch-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 100px 100px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-family: sans-serif;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width:110px;
+    height:60px;
+    margin: 0 10px;
+  }
+  
+  .connector {
+    position: absolute;
+    cursor: pointer; 
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .switch input {display:none}
+  .connector:before {
+    position: absolute;
+    content:"";
+    height: 50px;
+    width:50px;
+    left:5px;
+    bottom:5px;
+    background-color:white;
+    transition:0.4s;
+    border-radius:50px;
+  }
+  
+  input:checked + .connector {
+    background-color: darkcyan;
+  }
+  
+  input:checked + .connector:before {
+    transform: translateX(50px)
+  }
+
+
 @keyframes drive {
     from {
         transform: translateX(0px);
